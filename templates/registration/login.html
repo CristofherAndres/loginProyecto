@@ -13,12 +13,10 @@
             <form class="user" method="post">
                 {% csrf_token %}
                 <div class="form-group">
-                    <input type="text" class="form-control form-control-user" id="id_username" name="username"
-                        placeholder="Nombre de usuario...">
+                    <input type="text" class="form-control form-control-user" id="id_username" name="username" placeholder="Nombre de usuario...">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control form-control-user" id="id_password" name="password"
-                        placeholder="Contraseña...">
+                    <input type="password" class="form-control form-control-user" id="id_password" name="password" placeholder="Contraseña...">
                 </div>
                 <div class="form-group">
                     <div class="custom-control custom-checkbox small">
@@ -35,7 +33,7 @@
                 <a class="small" href="{% url 'password_reset' %}">¿Has olvidado tu contraseña?</a>
             </div>
             <div class="text-center">
-                <a class="small" href="register.html">¡Crear una cuenta!</a>
+                <a class="small" href="{% url 'signup' %}">¡Crear una cuenta!</a>
             </div>
         </div>
     </div>

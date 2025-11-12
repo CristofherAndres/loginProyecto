@@ -29,7 +29,15 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        {% include 'menu/sidebar.html' %}
+
+        {% if user.is_authenticated %}
+            {% if user.is_superuser %}
+                {% include 'menu/sidebar_admin.html' %}
+            {% else %}
+                {% include 'menu/sidebar.html' %}
+            {% endif %}
+        {% endif %}
+        
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
